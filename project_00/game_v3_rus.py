@@ -15,7 +15,8 @@ def awesome_help_epilogue():
           f'\n   позволит получить подробный вывод по каждому из проходов.\n'
           f'\n-- Запуск программы с параметром [-с] ([--choice])'
           f'\n   позволит задать границы диапазона и количество проходов'
-          f'\n   с подстановкой значений по умолчанию при пропуске ввода.\n'
+          f'\n   с подстановкой последних введённых значений, либо'
+          f'\n   значений по умолчанию при пропуске ввода.\n'
           f'\n-- Запуск программы с параметром [-s] ([--seed])'
           f'\n   позволит "заморозить" последовательности генерируемых'
           f'\n   значений для обеспечения воспроизводимости кода.\n'
@@ -121,10 +122,17 @@ def score_game(random_predict) -> int:
     # блок параметра задания произвольных значений
     # и определения значений по умолчанию:
     if any(arg in argv for arg in full_argv_list('c', 'choice')):
+        try:
+            with open('tmp.txt', 'r') as tmp_file:
+                tmp_predict_list = tmp_file.read().splitlines()
+        except FileNotFoundError:
+            exit('\n  Недостаточно данных!\n'
+                '  Запустите программу без параметров\n'
+                '  для создания файла исходных значений.\n')
         awesome_requests = [
-            '\n  Введите первую границу диапазона (целое число, включительно): ',
-            '  Введите вторую границу диапазона (целое число, включительно): ',
-            '  Введите количество проходов (целое число, отличное от \'0\'): '
+            f'\n  Введите первую границу диапазона (целое число, включительно) [{tmp_predict_list[0]}]: ',
+            f'  Введите вторую границу диапазона (целое число, включительно) [{tmp_predict_list[1]}]: ',
+            f'  Введите количество проходов (целое число, отличное от \'0\') [{tmp_predict_list[2]}]: '
         ]
         awesome_exception_answers = [
             '\n  Обратите внимание на условие ввода!'
@@ -133,11 +141,11 @@ def score_game(random_predict) -> int:
             '  To try, or not to try, that was the very question!\n'
         ]
         try:
-            predict_low = int(input(awesome_requests[0]) or 1)
-            predict_high = int(input(awesome_requests[1]) or 100)
+            predict_low = int(input(awesome_requests[0]) or tmp_predict_list[0])
+            predict_high = int(input(awesome_requests[1]) or tmp_predict_list[1])
             if predict_low > predict_high:  # расстановка границ по возрастанию
                 predict_low, predict_high = predict_high, predict_low
-            predict_size = abs(int(input(awesome_requests[2]) or 1000))
+            predict_size = abs(int(input(awesome_requests[2]) or tmp_predict_list[2]))
             if predict_size == 0:  # экранирование ошибки ввода '0'
                 exit(awesome_exception_answers[1])
         except ValueError:
@@ -146,6 +154,8 @@ def score_game(random_predict) -> int:
         predict_low = 1
         predict_high = 100
         predict_size = 1000
+    with open('tmp.txt', 'w') as tmp_file:
+        tmp_file.write(f'{predict_low}\n{predict_high}\n{predict_size}\n')
 
     # фиксация для воспроизводимости (по параметру):
     if any(arg in argv for arg in full_argv_list('s', 'seed')):
