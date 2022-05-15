@@ -79,7 +79,7 @@ def random_predict(number: int, iteration_number: int, random_attempts: bool,
     if random_attempts == True:
         predict_number = np.random.randint(args[0], args[1] + 1)
     else:
-        predict_number = int(np.mean([*args]))
+        predict_number = int(np.mean(args))
     predict_numbers = []
     predict_low = args[0]
     predict_high = args[1]
