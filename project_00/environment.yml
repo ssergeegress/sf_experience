@@ -1,0 +1,8 @@
+name: project_00
+channels:
+  - defaults
+dependencies:
+  - python=3.10.4
+  - ipykernel
+  - numpy=1.21.*
+prefix: ../env/project_00
