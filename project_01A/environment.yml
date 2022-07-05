@@ -1,0 +1,14 @@
+name: project_01A
+channels:
+  - defaults
+dependencies:
+  - python=3.10.4
+  - ipykernel
+  - numpy
+  - yapf
+  - nbconvert
+  - pandas
+  - matplotlib
+  - seaborn
+  - plotly
+prefix: ../envs/project_01A

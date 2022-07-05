@@ -129,4 +129,8 @@ dmypy.json
 .pyre/
 
 # temporary values file
+project_00/tmp.txt
 tmp.txt
+
+# avoid to load large data file
+project_01A/data/dst-3.0_16_1_hh_database.csv
