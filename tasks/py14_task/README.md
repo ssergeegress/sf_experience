@@ -5,8 +5,8 @@ Solving and modifying the task from the Python-14 module of
 Data Science Specialization Course by ["SкillFactory"](https://skillfactory.ru).
 
 ### Data info
-- [pу14_task.ipynb](https://github.com/ssergeegress/sf_experience/blob/main/tasks/py14_task/14_task.ipynb) — Jupiter Notebook presentation
-- [pу14_task.py](https://github.com/ssergeegress/sf_experience/blob/main/tasks/py14_task/pу14_task.py) — imported function python file
+- [pу14_task.ipynb](https://github.com/ssergeegress/sf_experience/blob/main/tasks/py14_task/py14_task.ipynb) — Jupiter Notebook presentation
+- [pу14_task.py](https://github.com/ssergeegress/sf_experience/blob/main/tasks/py14_task/py14_task.py) — imported function python file
 - [environment.yml](https://github.com/ssergeegress/sf_experience/blob/main/tasks/py14_task/environment.yml) — conda environment export file
 - [conda_env_create.sh](https://github.com/ssergeegress/sf_experience/blob/main/tasks/py14_task/conda_env_create.sh) expands the conda environment to <path_to_repository_directory>/env/<project>
 - [conda_env_remove.sh](https://github.com/ssergeegress/sf_experience/blob/main/tasks/py14_task/conda_env_remove.sh) removes the conda environment from <path_to_repository_directory>/env/<project>
