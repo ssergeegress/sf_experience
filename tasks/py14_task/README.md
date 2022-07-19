@@ -1,7 +1,7 @@
-# Python 14 additioonal task solution
+# <div style="text-align:center"><span style="color:red">The Python-14 task solution</span></div>  
 
 ### Description 
-Solving and modifying the task from the Python-14 module of
+Solving and modifying the task from the Python-14 module of  
 Data Science Specialization Course by ["SкillFactory"](https://skillfactory.ru).
 
 ### Data info
