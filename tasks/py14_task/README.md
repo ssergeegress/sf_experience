@@ -1,4 +1,4 @@
-# <div style="text-align:center"><span style="color:red">The Python-14 task solution</span></div>  
+# The Python-14 task solution  
 
 ### Description 
 Solving and modifying the task from the Python-14 module of  
