@@ -1,0 +1,15 @@
+name: py14_task
+channels:
+  - defaults
+dependencies:
+  - python=3.10.4
+  - ipykernel
+  - numpy
+  - yapf
+  - nbconvert
+  - pandas
+  - matplotlib
+  - seaborn
+  - plotly
+  - openpyxl
+prefix: ../envs/py14_task

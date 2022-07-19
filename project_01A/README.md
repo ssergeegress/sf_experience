@@ -44,6 +44,3 @@
 [Выполнение проекта](https://github.com/ssergeegress/sf_experience/blob/main/project_01A/project_01A.ipynb)
 
 :arrow_up:[к оглавлению](README.md#оглавление)
-
-
-Если информация по этому проекту окажется интересной или полезной, можно отметить репозиторий и профиль ⭐️⭐️⭐️-дами
