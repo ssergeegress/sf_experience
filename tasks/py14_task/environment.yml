@@ -12,4 +12,5 @@ dependencies:
   - seaborn
   - plotly
   - openpyxl
+  - python-kaleido
 prefix: ../envs/py14_task
