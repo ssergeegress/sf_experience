@@ -1,0 +1,16 @@
+name: py13_task
+channels:
+  - defaults
+dependencies:
+  - python=3.10.4
+  - ipykernel
+  - numpy
+  - yapf
+  - nbconvert
+  - pandas
+  - matplotlib
+  - seaborn
+  - plotly
+  - openpyxl
+  - python-kaleido
+prefix: ../envs/py13_task
