@@ -61,7 +61,8 @@ def outliers_z_score(df: pd.DataFrame,
                   line_dash="dash",
                   line_color="red")
     fig.show()
-    # fig.write_html("fig_04.html") # done (for github)
+    # fig.write_html("plotly/fig_04.html") # done (for github)
+    # fig.write_image('plotly/fig_04.svg') # done (for github)
 
     outliers = df[(df_here < lower_bound) | (df_here > upper_bound)]
     cleaned = df[(df_here > lower_bound) & (df_here < upper_bound)]
