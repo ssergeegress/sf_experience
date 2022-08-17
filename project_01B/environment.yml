@@ -1,0 +1,22 @@
+name: project_01B
+channels:
+  - defaults
+dependencies:
+  - python=3.10.4
+  - ipykernel
+  - numpy
+  - yapf
+  - nbconvert
+  - pandas
+  - matplotlib
+  - seaborn
+  - plotly
+  - openpyxl
+  - python-kaleido
+  - chardet
+  - requests
+  - schedule
+  - psycopg2
+  - sqlalchemy
+  - ipython-sql
+prefix: ../envs/project_01B
