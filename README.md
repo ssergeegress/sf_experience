@@ -1,5 +1,5 @@
 # sf_experience
-# Skill Factory DST Course projects.  
+# Skill Factory DST Course projects/solutions.  
 Each project is placed in it's own directory.  
 ### Direct links to the presentations:
 - [project_00](https://github.com/ssergeegress/sf_experience/blob/main/project_00/game_v3_rus.ipynb)
